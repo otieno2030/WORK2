@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Advertising</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .slide:first-child {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#equipments">Equipments</a>
+        <a href="#products">Products</a>
+        <a href="#apparells">Apparells</a>
+        <a href="#nutrition">Nutrition</a>
+    </div>
+
+    <div class="container" id="home">
+        <h1>Welcome to Fitness Advertising</h1>
+        <p>Here at Fitness Advertising, we specialize in the design and production of high-quality fitness advertising.</p>
+    </div>
+
+    <div class="container" id="equipments">
+        <h2>Equipments</h2>
+        <p>Browse through our selection of top-quality fitness equipments.</p>
+        <div class="slideshow">
+            <img class="slide" src="vest.webp" alt="equipments">
+            <img class="slide" src="weightbelt.webp" alt="equipments">
+            <img class="slide" src="wristwrap.webp" alt="equipments">
+            <img class="slide" src="healthybowl.webp" alt="equipments">
+        </div>
+    </div>
+
+    <div class="container" id="products">
+        <h2>Products</h2>
+        <p>Check out our extensive range of high-performance fitness products.</p>
+        <div class="slideshow">
+            <img class="slide" src="paralletes.jpg" alt="products">
+            <img class="slide" src="vest.webp" alt="products">
+            <img class="slide" src="HeriaShorts.webp" alt="products">
+            <img class="slide" src="healthy.avif" alt="products">
+        </div>
+    </div>
+
+    <div class="container" id="apparells">
+        <h2>Apparells</h2>
+        <p>Discover the latest in fitness apparells, designed to enhance your workout experience.</p>
+        <div class="slideshow">
+            <img class="slide" src="wokoutshorts.webp" alt="apparells">
+            <img class="slide" src="vest.webp" alt="apparells">
+            <img class="slide" src="paralletes.jpg" alt="apparells">
+            <img class="slide" src="healthy.avif" alt="apparells">
+        </div>
+    </div>
+
+    <div class="container" id="nutrition">
+        <h2>Nutrition</h2>
+        <p>Learn about the essential role of a balanced and nutritious diet in your overall fitness and health.</p>
+        <div class="slideshow">
+            <img class="slide" src="healthybowl.webp" alt="nutrition">
+            <img class="slide" src="HeriaShorts.webp" alt="nutrition">
+            <img class="slide" src="vest.webp" alt="nutrition">
+            <img class="slide" src="paralletes.jpg" alt="nutrition">
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = "0";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.opacity = "1";
+            setTimeout(showSlides, 3000); 
+        }
+    </script>
+</body>
+</html>
